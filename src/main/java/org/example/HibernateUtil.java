@@ -21,22 +21,14 @@ public class HibernateUtil {
 
     private HibernateUtil(){
 
+        flywayMigration();
 
 
         this.sessionFactory = new Configuration()
-                .setProperty("hibernate.connection.driver_class", "org.postgresql.Driver")
-                .setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5433/postgres")
-                .setProperty("hibernate.connection.username", "postgres")
-                .setProperty("hibernate.connection.password", "1234567890A12")
-                .setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect")
-                .setProperty("hibernate.show_sql", "true")
-                .setProperty("hibernate.hbm2ddl.auto", "update")
                 .addAnnotatedClass(Client.class)
                 .addAnnotatedClass(Planet.class)
                 .addAnnotatedClass(Ticket.class)
                 .buildSessionFactory();
-
-        flywayMigration();
     }
 
     public static HibernateUtil getInstance(){
