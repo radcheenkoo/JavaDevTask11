@@ -1,4 +1,4 @@
--- Вставка даних для клієнтів
+
 INSERT INTO client (name) VALUES
     ('Alice'),
     ('Bob'),
