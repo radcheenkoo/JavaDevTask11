@@ -1,9 +1,8 @@
-package org.example;
+package org.example.db;
 
 import org.example.entities.Client;
 import org.example.entities.Planet;
 import org.example.entities.Ticket;
-import org.flywaydb.core.Flyway;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 

@@ -3,6 +3,7 @@ package org.example;
 import org.example.crud.services.ClientCrudService;
 import org.example.crud.services.PlanetCrudService;
 import org.example.crud.services.TicketCrudService;
+import org.example.db.FlywayMigration;
 import org.example.entities.Client;
 import org.example.entities.Planet;
 import org.example.entities.Ticket;

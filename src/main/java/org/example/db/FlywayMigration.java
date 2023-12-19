@@ -1,4 +1,4 @@
-package org.example;
+package org.example.db;
 
 import org.apache.logging.log4j.*;
 import org.flywaydb.core.Flyway;
@@ -12,7 +12,6 @@ public class FlywayMigration {
 
     public static void migrating(){
         Flyway.configure().dataSource(URL, USER, PASSWORD)
-                .locations("classpath:db.migration")
                 .baselineOnMigrate(true)
                 .load().migrate();
         LOG.info("Mіграція завершена");

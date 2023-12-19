@@ -1,6 +1,6 @@
 package org.example.crud.services;
 
-import org.example.HibernateUtil;
+import org.example.db.HibernateUtil;
 import org.example.entities.Planet;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

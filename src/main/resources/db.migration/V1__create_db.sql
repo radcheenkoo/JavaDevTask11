@@ -10,7 +10,7 @@ CREATE TABLE planet (
 
 CREATE TABLE ticket (
     id SERIAL PRIMARY KEY,
-    created_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     client_id INT REFERENCES client(id),
     from_planet_id VARCHAR(10) REFERENCES planet(id),
     to_planet_id VARCHAR(10) REFERENCES planet(id),
