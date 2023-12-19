@@ -9,9 +9,6 @@ import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
     private static final HibernateUtil INSTANCE;
-    private static final String URL = "jdbc:postgresql://localhost:5433/postgres";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "1234567890A12";
 
     private SessionFactory sessionFactory;
 
@@ -21,14 +18,12 @@ public class HibernateUtil {
 
     private HibernateUtil(){
 
-        flywayMigration();
-
-
         this.sessionFactory = new Configuration()
                 .addAnnotatedClass(Client.class)
                 .addAnnotatedClass(Planet.class)
                 .addAnnotatedClass(Ticket.class)
                 .buildSessionFactory();
+
     }
 
     public static HibernateUtil getInstance(){
@@ -39,10 +34,6 @@ public class HibernateUtil {
     }
     public void closeSessionFactory(){
         this.sessionFactory.close();
-    }
-    private void flywayMigration() {
-        Flyway.configure().dataSource(URL, USER, PASSWORD)
-                .load().baseline();
     }
 
 }

@@ -2,6 +2,7 @@ package org.example.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
+import org.hibernate.boot.registry.selector.spi.StrategyCreator;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,7 +13,7 @@ import java.util.List;
 @Table(name = "client")
 public class Client {
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private int id;
 

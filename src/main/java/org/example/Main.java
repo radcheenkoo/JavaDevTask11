@@ -11,6 +11,8 @@ import java.sql.Timestamp;
 
 public class Main {
     public static void main(String[] args) {
+        FlywayMigration.migrating();
+
         ClientCrudService clientCrudService = new ClientCrudService();
         PlanetCrudService planetCrudService = new PlanetCrudService();
         TicketCrudService ticketCrudService = new TicketCrudService();

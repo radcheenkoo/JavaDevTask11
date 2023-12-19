@@ -7,11 +7,14 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "ticket")
 public class Ticket {
-    @Id @GeneratedValue()
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private int id;
     @JoinColumn(name = "created_at")
     private Timestamp createdAt;
+    @ManyToOne
+    @JoinColumn(name = "client")
+    private Client client;
 
     @ManyToOne
     @JoinColumn(name = "from_planet_id")
@@ -21,9 +24,6 @@ public class Ticket {
     @JoinColumn(name = "to_planet_id")
     private Planet toPlanetId;
 
-    @ManyToOne
-    @JoinColumn(name = "client")
-    private Client client;
 
     public Client getClient() {
         return client;
