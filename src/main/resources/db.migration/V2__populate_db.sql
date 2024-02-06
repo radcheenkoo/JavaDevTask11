@@ -1,14 +1,14 @@
 INSERT INTO client (name) VALUES
-  ('John'),
-  ('Alice'),
-  ('Bob'),
-  ('Mary'),
-  ('Sam'),
-  ('Kate'),
-  ('Bruce'),
-  ('Amanda'),
-  ('Nina'),
-  ('Alex');
+  (1,'John'),
+  (2,'Alice'),
+  (3,'Bob'),
+  (4,'Mary'),
+  (5,'Sam'),
+  (6,'Kate'),
+  (7,'Bruce'),
+  (8,'Amanda'),
+  (9,'Nina'),
+  (10,'Alex');
 
 INSERT INTO planet (id, name) VALUES
   ('MARS', 'Mars'),

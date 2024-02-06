@@ -1,5 +1,5 @@
 CREATE TABLE client (
-  id SERIAL PRIMARY KEY,
+  id INT PRIMARY KEY,
   name VARCHAR(200) NOT NULL CHECK (LENGTH(name) >= 3 AND LENGTH(name) <= 200)
 );
 
