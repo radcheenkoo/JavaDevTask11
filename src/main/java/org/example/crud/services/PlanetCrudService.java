@@ -33,7 +33,7 @@ public class PlanetCrudService {
 
     public boolean update(Planet planet) {
 
-        if (planet == null){
+        if (planet == null || planet.getId() == null || planet.getName() == null){
             return false;
         }
 

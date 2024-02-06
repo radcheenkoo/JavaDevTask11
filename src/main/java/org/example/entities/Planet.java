@@ -11,7 +11,7 @@ import java.util.List;
 @Table(name = "planet")
 public class Planet {
     @Id
-    @Column(name = "id")
+    @Column
     private String id;
     @Column(name = "name")
     private String name;

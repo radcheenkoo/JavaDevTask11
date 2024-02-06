@@ -13,7 +13,7 @@ public class Ticket {
     @JoinColumn(name = "created_at")
     private Timestamp createdAt;
     @ManyToOne
-    @JoinColumn(name = "client")
+    @JoinColumn(name = "client_id")
     private Client client;
 
     @ManyToOne

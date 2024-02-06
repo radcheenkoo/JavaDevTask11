@@ -34,8 +34,9 @@ public class TicketCrudService {
 
     public Ticket update(Ticket ticket) {
 
-        if (ticket == null){
-            throw new NullPointerException("Client == null");
+        if (ticket == null || ticket.getId() == 0 || ticket.getCreatedAt() == null ||
+                ticket.getClient() == null || ticket.getFromPlanetId() == null || ticket.getToPlanetId() == null){
+            throw new IllegalArgumentException("Invalid ticket : " + ticket);
         }
 
         Transaction transaction = session.beginTransaction();

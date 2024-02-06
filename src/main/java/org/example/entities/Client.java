@@ -2,10 +2,8 @@ package org.example.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
-import org.hibernate.boot.registry.selector.spi.StrategyCreator;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -14,7 +12,6 @@ import java.util.List;
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private int id;
 
     @Column

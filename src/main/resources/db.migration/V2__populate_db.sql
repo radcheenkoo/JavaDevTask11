@@ -1,30 +1,30 @@
 INSERT INTO client (name) VALUES
-  (1,'John'),
-  (2,'Alice'),
-  (3,'Bob'),
-  (4,'Mary'),
-  (5,'Sam'),
-  (6,'Kate'),
-  (7,'Bruce'),
-  (8,'Amanda'),
-  (9,'Nina'),
-  (10,'Alex');
+    ('Alice'),
+    ('Bob'),
+    ('Charlie'),
+    ('David'),
+    ('Elena'),
+    ('Frank'),
+    ('Grace'),
+    ('Hannah'),
+    ('Ian'),
+    ('Julia');
 
 INSERT INTO planet (id, name) VALUES
-  ('MARS', 'Mars'),
-  ('EARTH', 'Earth'),
-  ('VENUS', 'Venus'),
-  ('JUPITER', 'Jupiter'),
-  ('SATURN', 'Saturn');
+    ('MARS', 'Mars'),
+    ('VENUS', 'Venus'),
+    ('EARTH', 'Earth'),
+    ('JUPITER', 'Jupiter'),
+    ('SATURN', 'Saturn');
 
-INSERT INTO ticket (created_at, client_id, from_planet_id, to_planet_id) VALUES
-  (CURRENT_TIMESTAMP, 1, 'MARS', 'EARTH'),
-  (CURRENT_TIMESTAMP, 2, 'EARTH', 'VENUS'),
-  (CURRENT_TIMESTAMP, 3, 'JUPITER', 'MARS'),
-  (CURRENT_TIMESTAMP, 4, 'VENUS', 'EARTH'),
-  (CURRENT_TIMESTAMP, 5, 'SATURN', 'JUPITER'),
-  (CURRENT_TIMESTAMP, 6, 'MARS','SATURN'),
-  (CURRENT_TIMESTAMP, 7, 'EARTH','VENUS'),
-  (CURRENT_TIMESTAMP, 8, 'JUPITER','MARS'),
-  (CURRENT_TIMESTAMP, 9, 'VENUS','EARTH'),
-  (CURRENT_TIMESTAMP, 10, 'SATURN','MARS');
+INSERT INTO ticket (client_id, from_planet_id, to_planet_id) VALUES
+    (1, 'MARS', 'VENUS'),
+    (2, 'EARTH', 'MARS'),
+    (3, 'JUPITER', 'EARTH'),
+    (4, 'VENUS', 'SATURN'),
+    (5, 'SATURN', 'JUPITER'),
+    (6, 'MARS', 'EARTH'),
+    (7, 'EARTH', 'SATURN'),
+    (8, 'MARS', 'JUPITER'),
+    (9, 'VENUS', 'EARTH'),
+    (10, 'JUPITER', 'VENUS');

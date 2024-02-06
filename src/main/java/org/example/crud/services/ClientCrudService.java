@@ -32,8 +32,9 @@ public class ClientCrudService {
 
         public Client update(Client client) {
 
-            if (client == null){
-                throw new NullPointerException("Client == null");
+            if (client == null || client.getId() <= 0 || client.getName() == null){
+                throw new IllegalArgumentException("Invalid client : " + client );
+
             }
 
             Transaction transaction = session.beginTransaction();
